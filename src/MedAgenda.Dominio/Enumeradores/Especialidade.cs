@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MedAgenda.Dominio.Modelos
+namespace MedAgenda.Dominio.Enumeradores
 {
     public enum Especialidade
     {

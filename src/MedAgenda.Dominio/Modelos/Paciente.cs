@@ -1,6 +1,6 @@
 ﻿namespace MedAgenda.Dominio.Modelos
 {
-    class Paciente
+    public class Paciente
     {
         public int Id { get; set; }
         public string Nome { get; set; }

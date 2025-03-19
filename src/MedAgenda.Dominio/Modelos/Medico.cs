@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using MedAgenda.Dominio.Enumeradores;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MedAgenda.Dominio.Modelos
 {
-    class Medico
+    public class Medico
     {
         public int Id { get; set; }
         public string Nome { get; set; }
