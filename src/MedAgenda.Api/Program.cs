@@ -1,5 +1,8 @@
+using MedAgenda.Api.Extensao;
 using MedAgenda.Infraestrutura.BancoDeDados;
 using Microsoft.EntityFrameworkCore;
+
+ILoggerFactory loggerFactory;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +19,8 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+loggerFactory = app.Services.GetRequiredService<ILoggerFactory>();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -23,6 +28,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseDetalhesDoProblemaExcecao(loggerFactory);
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
