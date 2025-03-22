@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MedAgenda.Dominio\MedAgenda.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>
